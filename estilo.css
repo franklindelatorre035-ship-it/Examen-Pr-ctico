@@ -1,21 +1,13 @@
-/* 1. IMPORTAR FUENTE ROBOTO */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-/* Colores basados en la imagen y peticiones del usuario */
+/* Colores principales de la pagina */
 :root {
-    --color-primary-dark: #3f3160;       /* Azul/Morado Oscuro (Fondo de Header/Footer, Texto de Formulario) */
-    --color-secondary-accent: #c49a37; /* Dorado/Amarillo Oscuro (Acento, Bordes, Texto de Header/Footer) */
-    --color-text-form: var(--color-primary-dark); /* Texto de inputs y labels en el formulario */
-    --color-form-bg: #ffffff;           /* Fondo del Formulario (Blanco) */
-    --color-text-light: #f5f5f5;         /* Texto claro */
-    --color-error: #e74c3c;              /* Rojo para errores */
-}
-
-/* Estilos Globales */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    --color-primary-dark: #3f3160;       
+    --color-secondary-accent: #c49a37; 
+    --color-text-form: var(--color-primary-dark); 
+    --color-form-bg: #ffffff;           
+    --color-text-light: #f5f5f5;         
+    --color-error: #e74c3c;              
 }
 
 body {
