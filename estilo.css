@@ -1,0 +1,248 @@
+/* 1. IMPORTAR FUENTE ROBOTO */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Colores basados en la imagen y peticiones del usuario */
+:root {
+    --color-primary-dark: #3f3160;       /* Azul/Morado Oscuro (Fondo de Header/Footer, Texto de Formulario) */
+    --color-secondary-accent: #c49a37; /* Dorado/Amarillo Oscuro (Acento, Bordes, Texto de Header/Footer) */
+    --color-text-form: var(--color-primary-dark); /* Texto de inputs y labels en el formulario */
+    --color-form-bg: #ffffff;           /* Fondo del Formulario (Blanco) */
+    --color-text-light: #f5f5f5;         /* Texto claro */
+    --color-error: #e74c3c;              /* Rojo para errores */
+}
+
+/* Estilos Globales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Aplicamos Roboto a toda la página */
+    font-family: 'Roboto', sans-serif;
+    
+    background-color: var(--color-primary-dark); 
+    color: var(--color-text-light);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Cabecera y Pie de Página (Azul Oscuro con Letra Dorada) --- */
+
+header, footer {
+    background-color: var(--color-primary-dark); 
+    color: var(--color-secondary-accent); 
+    padding: 1rem 5%;
+    display: flex;
+    /* Alineamos el contenido principal a la izquierda */
+    justify-content: flex-start; 
+    align-items: center;
+    border-bottom: 2px solid var(--color-secondary-accent);
+}
+
+footer {
+    border-top: 2px solid var(--color-secondary-accent);
+    border-bottom: none;
+    justify-content: center;
+    padding: 1rem 5%;
+    text-align: center;
+    margin-top: auto; 
+}
+
+/* Contenedor de contenido de la cabecera (logo + título) */
+.header-content-center {
+    display: flex;
+    align-items: center;
+    /* Ajuste para asegurar que el logo y el texto se peguen a la izquierda */
+    justify-content: flex-start; 
+}
+
+.header-title-text h1 {
+    font-size: 1.5rem; 
+    color: var(--color-secondary-accent);
+    margin-left: 10px; /* Espacio entre el logo y el texto */
+    font-weight: 700;
+}
+
+/* Ocultar placeholders de texto (si se usa imagen) */
+.logo-placeholder, .logo-placeholder-form, .footer-logo-placeholder {
+    display: none; 
+}
+
+
+/* --- ESTILOS PARA AJUSTE DE TAMAÑO DE LOGOS --- */
+.header-logo, 
+.form-logo-img, 
+.footer-logo {
+    width: auto; 
+}
+
+/* 1. Logo en la Cabecera (Header) */
+.header-logo {
+    max-height: 50px; 
+}
+
+/* 2. Logo dentro del Formulario */
+.form-logo-img {
+    max-height: 45px; /* Ajustado para estar al lado del título H1 */
+    margin-bottom: 0;
+}
+
+/* 3. Logo en el Pie de Página (Footer) */
+.footer-logo {
+    max-height: 30px; 
+    margin-left: 10px; 
+}
+
+/* --- Contenido Principal y Fondo Opaco --- */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    
+    /* Imagen Opaca de Fondo */
+    background: 
+        linear-gradient(rgba(63, 49, 96, 0.8), rgba(63, 49, 96, 0.8)), 
+        url('imagenes/fondo.jpg') no-repeat center center; 
+        
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* --- Estilos del Formulario (Fondo Blanco, Borde Dorado, Texto Azul) --- */
+
+.form-container {
+    max-width: 500px;
+    width: 100%;
+    padding: 2.5rem;
+    background-color: var(--color-form-bg); 
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--color-secondary-accent); 
+    color: var(--color-text-form); 
+}
+
+/* Contenedor para alinear logo y H1 del formulario */
+.form-header-title {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el conjunto completo (Logo + Título H1) */
+    margin-bottom: 0.5rem; 
+}
+
+.form-header-title .form-logo {
+    display: flex; 
+    align-items: center;
+    margin-bottom: 0; 
+    margin-right: 10px; 
+}
+
+/* Títulos dentro del Formulario */
+#registroForm h1 {
+    font-size: 2.2rem;
+    color: var(--color-secondary-accent); 
+    margin-bottom: 0; 
+    text-align: left; 
+    font-weight: 700;
+}
+
+#registroForm h2 {
+    font-size: 1.1rem;
+    color: var(--color-text-form); 
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* --- Caja de Instrucciones (Tarjeta de Ayuda: Dorado con Letra Azul) --- */
+.instructions-box {
+    background-color: var(--color-secondary-accent); 
+    border: 1px solid var(--color-primary-dark); 
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.instructions-box p {
+    font-size: 0.95rem;
+    color: var(--color-primary-dark); 
+    font-weight: 700;
+}
+
+/* Etiquetas y Campos de Input */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700; 
+    color: var(--color-text-form); 
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9; 
+    color: var(--color-text-form); 
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: var(--color-secondary-accent); 
+    outline: none;
+    box-shadow: 0 0 5px rgba(196, 154, 55, 0.5);
+}
+
+/* Estilo para los campos inválidos */
+input.invalid, select.invalid {
+    border-color: var(--color-error);
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+}
+
+/* Botón de Envío */
+.submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--color-secondary-accent); 
+    color: var(--color-primary-dark); 
+    font-size: 1.1rem;
+    font-weight: 700; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #e0b44a; 
+}
+
+/* Mensajes de Error */
+.error-message {
+    display: block;
+    color: var(--color-error); 
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+    height: 1.2em; 
+}
+
+/* Mensaje de Éxito */
+.success-message {
+    text-align: center;
+    color: var(--color-secondary-accent); 
+    margin-top: 1rem;
+    font-weight: 700;
+    border: 1px solid var(--color-secondary-accent);
+    padding: 10px;
+    border-radius: 5px;
+}
